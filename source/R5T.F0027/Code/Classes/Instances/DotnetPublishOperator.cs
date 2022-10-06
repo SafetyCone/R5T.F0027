@@ -7,7 +7,7 @@ namespace R5T.F0027
 	{
 		#region Infrastructure
 
-	    public static DotnetPublishOperator Instance { get; } = new();
+	    public static IDotnetPublishOperator Instance { get; } = new DotnetPublishOperator();
 
 	    private DotnetPublishOperator()
 	    {

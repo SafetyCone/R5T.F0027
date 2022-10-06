@@ -42,7 +42,10 @@ namespace R5T.F0027
 			Instances.DotnetNugetOperator.Run(nugetArguments);
 		}
 
-		public void Push_ToLocalDirectory(
+		/// <summary>
+		/// Returns the package file path for the package in the local directory the initial package file was pushed to.s
+		/// </summary>
+		public string Push_ToLocalDirectory(
 			string packageFilePath,
 			string localDirectoryPath)
         {
@@ -51,6 +54,14 @@ namespace R5T.F0027
 				localDirectoryPath);
 
 			this.Run(pushArguments);
+
+			var packageFileName = F0002.PathOperator.Instance.GetFileName(packageFilePath);
+
+			var localDirectoryPackageFilePath = F0002.PathOperator.Instance.GetFilePath(
+				localDirectoryPath,
+				packageFileName);
+
+			return localDirectoryPackageFilePath;
         }
 
 		public void Push_ToNuGet(

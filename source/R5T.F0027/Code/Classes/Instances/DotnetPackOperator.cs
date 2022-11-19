@@ -7,7 +7,7 @@ namespace R5T.F0027
 	{
 		#region Infrastructure
 
-	    public static DotnetPackOperator Instance { get; } = new();
+	    public static IDotnetPackOperator Instance { get; } = new DotnetPackOperator();
 
 	    private DotnetPackOperator()
 	    {

@@ -74,7 +74,7 @@ namespace R5T.F0027
             string dotnetArguments,
             string currentDirectory)
         {
-            List<Exception> exceptions = new();
+            List<Exception> exceptions = new List<Exception>();
 
             void OutputReceivedHandler(object sender, DataReceivedEventArgs eventArgs)
             {

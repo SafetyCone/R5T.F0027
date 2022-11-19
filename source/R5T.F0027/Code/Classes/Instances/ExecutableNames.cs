@@ -7,7 +7,7 @@ namespace R5T.F0027
 	{
 		#region Infrastructure
 
-	    public static ExecutableNames Instance { get; } = new();
+	    public static IExecutableNames Instance { get; } = new ExecutableNames();
 
 	    private ExecutableNames()
 	    {

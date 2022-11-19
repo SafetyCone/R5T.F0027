@@ -7,7 +7,7 @@ namespace R5T.F0027
 	{
 		#region Infrastructure
 
-	    public static Urls Instance { get; } = new();
+	    public static IUrls Instance { get; } = new Urls();
 
 	    private Urls()
 	    {

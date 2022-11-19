@@ -7,7 +7,7 @@ namespace R5T.F0027
 	{
 		#region Infrastructure
 
-	    public static DotnetCommandLineOperator Instance { get; } = new();
+	    public static IDotnetCommandLineOperator Instance { get; } = new DotnetCommandLineOperator();
 
 	    private DotnetCommandLineOperator()
 	    {

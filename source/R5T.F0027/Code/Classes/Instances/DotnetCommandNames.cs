@@ -7,7 +7,7 @@ namespace R5T.F0027
 	{
 		#region Infrastructure
 
-	    public static DotnetCommandNames Instance { get; } = new();
+	    public static IDotnetCommandNames Instance { get; } = new DotnetCommandNames();
 
 	    private DotnetCommandNames()
 	    {

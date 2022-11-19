@@ -7,7 +7,7 @@ namespace R5T.F0027
 	{
 		#region Infrastructure
 
-	    public static DotnetNugetOperator Instance { get; } = new();
+	    public static IDotnetNugetOperator Instance { get; } = new DotnetNugetOperator();
 
 	    private DotnetNugetOperator()
 	    {

@@ -7,9 +7,8 @@ namespace R5T.F0027.Construction
     {
         public static void Main()
         {
-            DotnetPublishOperator.Instance.Publish(
-                @"C:\Code\DEV\Git\GitHub\SafetyCone\R5T.F0069\source\R5T.F0069\R5T.F0069.csproj",
-                @"C:\Temp\Publish\R5T.F0069");
+            //Operations.Instance.PublishLibrary();
+            Operations.Instance.PublishLibrary_WithNuGetPackage();
         }
     }
 }

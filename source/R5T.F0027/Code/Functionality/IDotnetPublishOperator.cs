@@ -26,7 +26,21 @@ namespace R5T.F0027
 			this.Run(publishArguments);
 		}
 
-		public void Publish(
+        public void Publish(
+            string projectFilePath,
+            string outputDirectoryPath)
+        {
+            // Always the release configuration.
+            var configurationArgument = "-c Release";
+
+            var outputDirectoryArgument = $"-o \"{outputDirectoryPath}\"";
+
+            var publishArguments = $"\"{projectFilePath}\" {configurationArgument} {outputDirectoryArgument}";
+
+            this.Run(publishArguments);
+        }
+
+        public void Publish_WithRuntimeArgument(
 			string projectFilePath,
 			string outputDirectoryPath)
 		{
@@ -35,7 +49,9 @@ namespace R5T.F0027
 
 			var outputDirectoryArgument = $"-o \"{outputDirectoryPath}\"";
 
-			var publishArguments = $"\"{projectFilePath}\" {configurationArgument} {outputDirectoryArgument}";
+			var runtimeArgument = "-r win-x64 --self-contained";
+
+			var publishArguments = $"\"{projectFilePath}\" {configurationArgument} {outputDirectoryArgument} {runtimeArgument}";
 
 			this.Run(publishArguments);
 		}

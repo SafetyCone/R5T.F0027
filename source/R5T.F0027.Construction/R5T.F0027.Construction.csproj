@@ -1,14 +1,11 @@
-<Project Sdk="Microsoft.NET.Sdk">
-
+﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>net6.0</TargetFramework>
   </PropertyGroup>
-
   <ItemGroup>
     <ProjectReference Include="..\..\..\R5T.F0034\source\R5T.F0034\R5T.F0034.csproj" />
     <ProjectReference Include="..\..\..\R5T.Z0018.Private\source\R5T.Z0018\R5T.Z0018.csproj" />
     <ProjectReference Include="..\R5T.F0027\R5T.F0027.csproj" />
   </ItemGroup>
-
 </Project>

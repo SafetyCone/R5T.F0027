@@ -80,8 +80,9 @@ namespace R5T.F0027
             {
                 F0000.Instances.CommandLineOperator.Default_OutputReceivedHandler(sender, eventArgs);
 
-                var isError = F0000.StringOperator.Instance.IsNotNullAndNotEmpty(eventArgs.Data)
+                var isError = F0000.StringOperator.Instance.Is_NotNullOrEmpty(eventArgs.Data)
                     && F0000.StringOperator.Instance.Contains(eventArgs.Data, ": error");
+
                 if(isError)
                 {
                     var exception = F0000.Instances.ExceptionOperator.GetErrorDataReceivedException(eventArgs);

@@ -32,7 +32,7 @@ namespace R5T.F0027
 			this.Run(packArguments);
 
 			// Now build the output file path.
-			var projectName = pathOperator.GetFileNameStem(projectFilePath);
+			var projectName = pathOperator.Get_FileNameStem(projectFilePath);
 
 			// Read the project file to get the version of the project, else assume 1.0.0.
 			var version = F0020.Instances.ProjectFileOperator.GetVersionOrDefault(projectFilePath);
@@ -42,13 +42,13 @@ namespace R5T.F0027
 
 			var packageFileName = $"{projectName}.{versionString}.nupkg";
 
-			var projectDirectoryPath = pathOperator.GetParentDirectoryPath(projectFilePath);
+			var projectDirectoryPath = pathOperator.Get_ParentDirectoryPath(projectFilePath);
 
-			var releaseDirectoryPath = pathOperator.GetDirectoryPath(
+			var releaseDirectoryPath = pathOperator.Get_DirectoryPath(
 				projectDirectoryPath,
 				@"bin/Release");
 
-			var packageFilePath = pathOperator.GetFilePath(
+			var packageFilePath = pathOperator.Get_FilePath(
 				releaseDirectoryPath,
 				packageFileName);
 

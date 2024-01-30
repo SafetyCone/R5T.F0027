@@ -55,9 +55,9 @@ namespace R5T.F0027
 
 			this.Run(pushArguments);
 
-			var packageFileName = F0002.PathOperator.Instance.GetFileName(packageFilePath);
+			var packageFileName = F0002.PathOperator.Instance.Get_FileName(packageFilePath);
 
-			var localDirectoryPackageFilePath = F0002.PathOperator.Instance.GetFilePath(
+			var localDirectoryPackageFilePath = F0002.PathOperator.Instance.Get_FilePath(
 				localDirectoryPath,
 				packageFileName);
 

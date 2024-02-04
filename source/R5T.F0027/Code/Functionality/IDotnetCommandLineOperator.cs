@@ -85,7 +85,7 @@ namespace R5T.F0027
 
                 if(isError)
                 {
-                    var exception = F0000.Instances.ExceptionOperator.GetErrorDataReceivedException(eventArgs);
+                    var exception = F0000.Instances.ExceptionOperator.Get_ErrorDataReceivedException(eventArgs);
 
                     exceptions.Add(exception);
                 }

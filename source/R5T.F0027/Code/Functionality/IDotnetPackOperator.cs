@@ -20,7 +20,7 @@ namespace R5T.F0027
 		/// </summary>
 		public string Pack(string projectFilePath)
 		{
-			var pathOperator = F0002.Instances.PathOperator;
+			var pathOperator = Instances.PathOperator;
 
 			// Build the command.
 			// Always release.
@@ -53,7 +53,7 @@ namespace R5T.F0027
 				packageFileName);
 
 			// Check that the file path *actually* exists.
-			F0000.Instances.FileSystemOperator.VerifyFileExists(packageFilePath);
+			Instances.FileSystemOperator.Verify_File_Exists(packageFilePath);
 
 			return packageFilePath;
 		}

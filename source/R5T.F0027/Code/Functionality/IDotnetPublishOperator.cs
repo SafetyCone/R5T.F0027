@@ -15,16 +15,17 @@ namespace R5T.F0027
 			Instances.DotnetOperator.Run(dotnetArguments);
 		}
 
-		public void Publish(string projectFilePath)
-		{
-			var folderPublishProfileFilePath = Z0011.Instances.ExecutableFileRelativeFilePaths.FolderPublishProfileFilePath;
+		//public void Publish(string projectFilePath)
+		//{
+		//	// Value is from R5T.Z0011 FYI.
+		//	var folderPublishProfileFilePath = Instances.ExecutableFileRelativeFilePaths.FolderPublishProfileFilePath;
 
-			var publicProfileArgument = $"-p:PublishProfileFullPath=\"{folderPublishProfileFilePath}\"";
+		//	var publicProfileArgument = $"-p:PublishProfileFullPath=\"{folderPublishProfileFilePath}\"";
 
-			var publishArguments = $"\"{projectFilePath}\" {publicProfileArgument}";
+		//	var publishArguments = $"\"{projectFilePath}\" {publicProfileArgument}";
 
-			this.Run(publishArguments);
-		}
+		//	this.Run(publishArguments);
+		//}
 
         public void Publish(
             string projectFilePath,

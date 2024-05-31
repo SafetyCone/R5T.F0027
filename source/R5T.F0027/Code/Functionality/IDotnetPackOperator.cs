@@ -35,10 +35,10 @@ namespace R5T.F0027
 			var projectName = pathOperator.Get_FileNameStem(projectFilePath);
 
 			// Read the project file to get the version of the project, else assume 1.0.0.
-			var version = F0020.Instances.ProjectFileOperator.GetVersionOrDefault(projectFilePath);
+			var version = Instances.ProjectFileOperator.GetVersionOrDefault(projectFilePath);
 
 			// Use version to create the package file name.
-			var versionString = F0000.Instances.VersionOperator.ToString_Major_Minor_Build(version);
+			var versionString = Instances.VersionOperator.ToString_Major_Minor_Build(version);
 
 			var packageFileName = $"{projectName}.{versionString}.nupkg";
 

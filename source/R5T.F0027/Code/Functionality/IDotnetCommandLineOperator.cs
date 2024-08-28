@@ -74,7 +74,7 @@ namespace R5T.F0027
             string dotnetArguments,
             string currentDirectory)
         {
-            List<Exception> exceptions = new List<Exception>();
+            var exceptions = new List<Exception>();
 
             void OutputReceivedHandler(object sender, DataReceivedEventArgs eventArgs)
             {
@@ -95,7 +95,7 @@ namespace R5T.F0027
                 Instances.ExecutableNames.Dotnet,
                 dotnetArguments,
                 OutputReceivedHandler,
-                Instances.CommandLineOperator.GetErrorReceivedEventHandler(exceptions));
+                Instances.CommandLineOperator.Get_ErrorReceivedEventHandler(exceptions));
 
             var isFailure = Instances.ExitCodeOperator.IsFailure(exitCode);
             if(isFailure && exceptions.Any())

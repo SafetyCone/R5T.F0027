@@ -41,6 +41,27 @@ namespace R5T.F0027
             this.Run(publishArguments);
         }
 
+        /// <summary>
+        /// Runs the publish command with the WasmEnableWebcil=false property.
+		/// This is useful in survey-specific builds of Blazor WebAssembly projects, because it generates DLL files that can be examined.
+        /// </summary>
+        public void Publish_WithWasmEnableWebcilPropertyForBlazorWebassembly(
+            string projectFilePath,
+            string outputDirectoryPath)
+        {
+            // Always the release configuration.
+            var configurationArgument = "-c Release";
+
+            var outputDirectoryArgument = $"-o \"{outputDirectoryPath}\"";
+
+			var wasmEnableWebcil_Argument = "-p:WasmEnableWebcil=false";
+
+			// For some reason, the output directory path argument has to be last.
+            var publishArguments = $"\"{projectFilePath}\" {configurationArgument} {wasmEnableWebcil_Argument} {outputDirectoryArgument}";
+
+            this.Run(publishArguments);
+        }
+
         public void Publish_WithRuntimeArgument(
 			string projectFilePath,
 			string outputDirectoryPath)

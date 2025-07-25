@@ -1,8 +1,8 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFramework>netstandard2.1</TargetFramework>
+    <NoWarn>CS1573;CS1587;CS1591;IDE0130</NoWarn>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
-    <NoWarn>1573;1587;1591</NoWarn>
   </PropertyGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\..\R5T.F0020\source\R5T.F0020\R5T.F0020.csproj" />
